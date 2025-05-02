@@ -1,0 +1,166 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.abstract {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.instructors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.instructor {
+    text-align: center;
+    width: 200px;
+}
+
+.instructor img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #2c3e50;
+}
+
+.instructor img.alex {
+    object-position: center 15%;
+}
+
+.instructor img.tenghao {
+    object-position: center 15%;
+}
+
+.instructor img.nanyun {
+    object-position: center 5%;
+}
+
+.instructor h3 {
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+.instructor p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.section-header {
+    text-align: center;
+    margin: 3rem 0;
+    color: #2c3e50;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h3 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.card-content.active {
+    max-height: 2000px;
+}
+
+.quote {
+    font-style: italic;
+    color: #666;
+    margin: 1rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid #2c3e50;
+}
+
+.expand-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.expand-icon.active {
+    transform: rotate(180deg);
+}
+
+.bibliography-toggle {
+    margin-top: 1.5rem;
+    cursor: pointer;
+    color: #2c3e50;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.bibliography-toggle h4 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bibliography {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.bibliography.active {
+    max-height: 5000px;
+}
+
+.bibliography ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.bibliography li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+} 
