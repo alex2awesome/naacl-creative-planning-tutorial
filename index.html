@@ -5,250 +5,331 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Planning with Language Models - NAACL 2025 Tutorial</title>
     <link rel="stylesheet" href="static/css/basic.css">
+    <style>
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .sticky-header a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .sticky-header a:hover {
+            background-color: #f8f9fa;
+        }
+
+        body {
+            padding-top: 4rem; /* Add padding to account for fixed header */
+        }
+
+        .section {
+            scroll-margin-top: 6rem; /* Increased from 4rem to 6rem to add more space above sections */
+        }
+    </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Creative Planning with Language Models</h1>
-        <h2>Practice, Evaluation and Applications</h2>
-        <p>NAACL 2025 Tutorial</p>
-        <p class="time-place" style="font-size: 1.2em; color: #2c3e50; margin-top: 1em; font-weight: 500;">Saturday, May 3rd, 9-12:30am MDT<br>Pecos Room</p>
+    <div class="sticky-header">
+        <a href="#home">Home</a>
+        <a href="#instructors">Meet Your Instructors</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#dive-deeper">Dive Deeper</a>
+        <a href="#materials">Tutorial Materials</a>
     </div>
 
-    <div class="lead-in">
-        <p style="font-size: 1.4em; color: #2c3e50; letter-spacing: 0.5px; line-height: 1.6;">
-            What do <span style="font-size: 1.2em;">📰</span> journalism, <span style="font-size: 1.2em;">🎵</span> music lyric composition, <span style="font-size: 1.2em;">⚖️</span> legal writing, <span style="font-size: 1.2em;">💭</span> psychological counseling and <span style="font-size: 1.2em;">🍽️</span> menu design all have in common? That's right! They are all human-centered tasks with unclear and
-              subjective rewards. Although language models struggle to perform these tasks, humans are able to 
-              interpret and manage this subjectivity well. How can language models learn to do this? Come see how we might make progress in our tutorial.</p>
-    </div>
+    <div id="home" class="section">
+        <div class="header">
+            <h1>Creative Planning with Language Models</h1>
+            <h2>Practice, Evaluation and Applications</h2>
+            <p>NAACL 2025 Tutorial</p>
+            <p class="time-place" style="font-size: 1.2em; color: #2c3e50; margin-top: 1em; font-weight: 500;">Saturday, May 3rd, 9-12:30am MDT<br>Pecos Room</p>
+        </div>
 
-    <h2 class="section-header">Meet Your Instructors</h2>
-    <div class="instructors" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6rem; margin-top: 3rem;">
-        <div class="instructor">
-            <img src="assets/images/alex-profile.png" alt="Alexander Spangher" class="alex">
-            <h3><a href="https://www.alexander-spangher.com/" style="color: #2c3e50; text-decoration: none;">Alexander Spangher</a></h3>
-            <p>USC</p>
-            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
-                <a href="https://x.com/AlexanderSpangh" style="text-decoration: none;">
-                    <img src="assets/images/x-logo.jpg" alt="X (Twitter)" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://scholar.google.com/citations?user=pZEaPR8AAAAJ&hl=en" style="text-decoration: none;">
-                    <img src="assets/images/google-scholar-logo.png" alt="Google Scholar" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://www.alexander-spangher.com/" style="text-decoration: none;">
-                    <img src="assets/images/link-icon.jpg" alt="Website" style="width: 24px; height: 24px;">
-                </a>
-            </div>
-        </div>
-        <div class="instructor">
-            <img src="assets/images/tenghao-profile.png" alt="Tenghao Huang" class="tenghao">
-            <h3><a href="https://tenghaohuang.github.io/" style="color: #2c3e50; text-decoration: none;">Tenghao Huang</a></h3>
-            <p>USC</p>
-            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
-                <a href="https://x.com/TenghaoHuang45" style="text-decoration: none;">
-                    <img src="assets/images/x-logo.jpg" alt="X (Twitter)" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://scholar.google.com/citations?user=cZKQGyQAAAAJ&hl=en&oi=ao" style="text-decoration: none;">
-                    <img src="assets/images/google-scholar-logo.png" alt="Google Scholar" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://tenghaohuang.github.io/" style="text-decoration: none;">
-                    <img src="assets/images/link-icon.jpg" alt="Website" style="width: 24px; height: 24px;">
-                </a>
-            </div>
-        </div>
-        <div class="instructor">
-            <img src="assets/images/philippe-profile.png" alt="Philippe Laban">
-            <h3><a href="https://tingofurro.github.io/" style="color: #2c3e50; text-decoration: none;">Philippe Laban</a></h3>
-            <p>Microsoft Research</p>
-            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
-                <a href="https://x.com/PhilippeLaban" style="text-decoration: none;">
-                    <img src="assets/images/x-logo.jpg" alt="X (Twitter)" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://scholar.google.com/citations?user=fR5t200AAAAJ&hl=en&oi=ao" style="text-decoration: none;">
-                    <img src="assets/images/google-scholar-logo.png" alt="Google Scholar" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://tingofurro.github.io/" style="text-decoration: none;">
-                    <img src="assets/images/link-icon.jpg" alt="Website" style="width: 24px; height: 24px;">
-                </a>
-            </div>
-        </div>
-        <div class="instructor">
-            <img src="assets/images/nanyun-profile.png" alt="Nanyun (Violet) Peng" class="nanyun">
-            <h3><a href="https://violetpeng.github.io/" style="color: #2c3e50; text-decoration: none;">Nanyun (Violet) Peng</a></h3>
-            <p>UCLA</p>
-            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
-                <a href="https://x.com/VioletNPeng" style="text-decoration: none;">
-                    <img src="assets/images/x-logo.jpg" alt="X (Twitter)" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://scholar.google.com/citations?user=XxRXvX0AAAAJ&hl=en&oi=ao" style="text-decoration: none;">
-                    <img src="assets/images/google-scholar-logo.png" alt="Google Scholar" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://violetpeng.github.io/" style="text-decoration: none;">
-                    <img src="assets/images/link-icon.jpg" alt="Website" style="width: 24px; height: 24px;">
-                </a>
-            </div>
+        <div class="lead-in">
+            <p style="font-size: 1.4em; color: #2c3e50; letter-spacing: 0.5px; line-height: 1.6;">
+                What do <span style="font-size: 1.2em;">📰</span> journalism, <span style="font-size: 1.2em;">🎵</span> music lyric composition, <span style="font-size: 1.2em;">⚖️</span> legal writing, <span style="font-size: 1.2em;">💭</span> psychological counseling and <span style="font-size: 1.2em;">🍽️</span> menu design all have in common? That's right! They are all human-centered tasks with unclear and
+                  subjective rewards. Although language models struggle to perform these tasks, humans are able to 
+                  interpret and manage this subjectivity well. How can language models learn to do this? Come see how we might make progress in our tutorial.</p>
         </div>
     </div>
 
-    <h2 class="section-header">Abstract</h2>
-    <div class="abstract">
-        <p>The use of large language models (LLMs) in human-centered creative domains — such as journalism, scientific writing, and storytelling — has showcased their potential for content generation but highlighted a critical gap: planning. Planning, a fundamental process in many creative domains, refers to higher level decisions writers (or agents) make that influence textual output they produce. Planning is especially hard to perform in creative domains, where human rewards are often unclear or sparsely observed. This tutorial explores how planning has been learned and deployed in creative workflows. We will cover three aspects of creativity: <strong>Problem-Finding</strong> (how to define rewards and goals for creative tasks), <strong>Path-Finding</strong> (how to generate novel creative outputs that meet goals) and <strong>Evaluation</strong> (how to judge). We will also consider three learning settings: <em>Full Data Regimens</em> (when observational data for decisions and resulting text exist), <em>Partial</em> (when text exists but decisions can be inferred) and <em>Low</em> (when neither exist). The tutorial will end with practical demonstrations in computational journalism, web agents, and other creative domains. By bridging theoretical concepts and practical demonstrations, this tutorial aims to inspire new research directions in leveraging LLMs for creative planning tasks.</p>
-    </div>
-
-    <h2 class="section-header">Schedule</h2>
-    <div class="schedule" style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-bottom: 3rem;">
-        <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
-            <div style="font-weight: 500;">Introduction</div>
-            <div style="color: #666;">9:00 - 9:15</div>
-        </div>
-        <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
-            <div style="font-weight: 500;">Problem-finding <span style="color: #666;">(<a href="https://www.alexander-spangher.com/" style="color: #666; text-decoration: none;">Alexander Spangher</a>)</span></div>
-            <div style="color: #666;">9:15 - 9:45</div>
-        </div>
-        <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
-            <div style="font-weight: 500;">Path-finding <span style="color: #666;">(Tenghao Huang)</span></div>
-            <div style="color: #666;">9:45 - 10:15</div>
-        </div>
-        <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
-            <div style="font-weight: 500;">Path-finding <span style="color: #666;">(Nanyun Peng)</span></div>
-            <div style="color: #666;">10:15 - 10:45</div>
-        </div>
-        <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; background-color: #e9ecef; padding: 1rem; border-radius: 4px;">
-            <div style="font-weight: 500;">Break</div>
-            <div style="color: #666;">10:45 - 11:15</div>
-        </div>
-        <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
-            <div style="font-weight: 500;">Evaluation <span style="color: #666;">(Philippe Laban)</span></div>
-            <div style="color: #666;">11:15 - 11:45</div>
-        </div>
-        <div class="schedule-item" style="margin-bottom: 1rem;">
-            <div style="font-weight: 500; margin-bottom: 0.5rem;">Demos</div>
-            <div style="margin-left: 1.5rem;">
-                <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                    <div><a href="https://arxiv.org/pdf/2503.04734" style="color: #2c3e50; text-decoration: underline;">Menu Design</a>. Presented by <span style="color: #666;"><a href="https://kristinagligoric.github.io/" style="color: #2c3e50; text-decoration: underline;">Kristina Gligoric.</a></span></div>
-                    <div style="color: #666;">11:45 - 12:00</div>
+    <div id="instructors" class="section">
+        <h2 class="section-header">Meet Your Instructors</h2>
+        <div class="instructors" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6rem; margin-top: 3rem;">
+            <div class="instructor">
+                <img src="assets/images/alex-profile.png" alt="Alexander Spangher" class="alex">
+                <h3><a href="https://www.alexander-spangher.com/" style="color: #2c3e50; text-decoration: none;">Alexander Spangher</a></h3>
+                <p>USC</p>
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
+                    <a href="https://x.com/AlexanderSpangh" style="text-decoration: none;">
+                        <img src="assets/images/x-logo.jpg" alt="X (Twitter)" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=pZEaPR8AAAAJ&hl=en" style="text-decoration: none;">
+                        <img src="assets/images/google-scholar-logo.png" alt="Google Scholar" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://www.alexander-spangher.com/" style="text-decoration: none;">
+                        <img src="assets/images/link-icon.jpg" alt="Website" style="width: 24px; height: 24px;">
+                    </a>
                 </div>
-                <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                    <div><a href="https://minnesotanlp.github.io/LawFlow-website/" style="color: #2c3e50; text-decoration: underline;">LawFlow</a>. Presented by <span style="color: #666;"><a href="https://debaratidas94.github.io/" style="color: #2c3e50; text-decoration: underline;">Debarati Das.</a></span></div>
-                    <div style="color: #666;">12:00 - 12:15</div>
+            </div>
+            <div class="instructor">
+                <img src="assets/images/tenghao-profile.png" alt="Tenghao Huang" class="tenghao">
+                <h3><a href="https://tenghaohuang.github.io/" style="color: #2c3e50; text-decoration: none;">Tenghao Huang</a></h3>
+                <p>USC</p>
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
+                    <a href="https://x.com/TenghaoHuang45" style="text-decoration: none;">
+                        <img src="assets/images/x-logo.jpg" alt="X (Twitter)" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=cZKQGyQAAAAJ&hl=en&oi=ao" style="text-decoration: none;">
+                        <img src="assets/images/google-scholar-logo.png" alt="Google Scholar" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://tenghaohuang.github.io/" style="text-decoration: none;">
+                        <img src="assets/images/link-icon.jpg" alt="Website" style="width: 24px; height: 24px;">
+                    </a>
                 </div>
-                <div class="schedule-item" style="display: flex; justify-content: space-between;">
-                    <div><a href="https://storm-project.stanford.edu/research/storm/" style="color: #2c3e50; text-decoration: underline;">STORM</a>. Presented by <span style="color: #666;"><a href="https://yucheng-jiang.github.io/" style="color: #2c3e50; text-decoration: underline;">Yucheng Jiang.</a></span></div>
-                    <div style="color: #666;">12:15 - 12:30</div>
+            </div>
+            <div class="instructor">
+                <img src="assets/images/philippe-profile.png" alt="Philippe Laban">
+                <h3><a href="https://tingofurro.github.io/" style="color: #2c3e50; text-decoration: none;">Philippe Laban</a></h3>
+                <p>Microsoft Research</p>
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
+                    <a href="https://x.com/PhilippeLaban" style="text-decoration: none;">
+                        <img src="assets/images/x-logo.jpg" alt="X (Twitter)" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=fR5t200AAAAJ&hl=en&oi=ao" style="text-decoration: none;">
+                        <img src="assets/images/google-scholar-logo.png" alt="Google Scholar" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://tingofurro.github.io/" style="text-decoration: none;">
+                        <img src="assets/images/link-icon.jpg" alt="Website" style="width: 24px; height: 24px;">
+                    </a>
+                </div>
+            </div>
+            <div class="instructor">
+                <img src="assets/images/nanyun-profile.png" alt="Nanyun (Violet) Peng" class="nanyun">
+                <h3><a href="https://violetpeng.github.io/" style="color: #2c3e50; text-decoration: none;">Nanyun (Violet) Peng</a></h3>
+                <p>UCLA</p>
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
+                    <a href="https://x.com/VioletNPeng" style="text-decoration: none;">
+                        <img src="assets/images/x-logo.jpg" alt="X (Twitter)" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=XxRXvX0AAAAJ&hl=en&oi=ao" style="text-decoration: none;">
+                        <img src="assets/images/google-scholar-logo.png" alt="Google Scholar" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://violetpeng.github.io/" style="text-decoration: none;">
+                        <img src="assets/images/link-icon.jpg" alt="Website" style="width: 24px; height: 24px;">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <h2 class="section-header">Dive Deeper</h2>
-    <div class="cards-container">
-        <div class="card" onclick="toggleCard(this)">
-            <div class="card-header">
-                <h3>Problem-Finding</h3>
-                <span class="expand-icon">▼</span>
-            </div>
-            <div class="card-content">
-                <p class="quote">"The formulation of a problem is often more essential than its solution, which may be merely a matter of mathematical or experimental skill." — Albert Einstein, The Evolution of Physics</p>
-                <p>In this section, we explore how creative actors define tasks, goal-states, and rewards. We map problem-finding in NLP to learning complex rewards, examining approaches that mix multiple rewards, frame language modeling as inverse-reinforcement learning (IRL), and explore emulation learning settings. We'll look at how humans (and chimpanzees) learn rewards through observing motivations and end-state outputs, and how this applies to understanding human creative processes.</p>
-                <p>We'll examine how researchers have studied art students and found that those who focused most on defining the problem produced more creative work. In NLP, this translates to learning complex rewards through various approaches: mixing multiple rewards, framing language modeling as inverse-reinforcement learning, and exploring emulation learning settings. We'll discuss how scientists can "read through the lines" to understand actions taken in research papers, even when not explicitly mentioned, and how this ability is crucial for reproducibility in our field.</p>
-                <div class="bibliography-toggle" onclick="toggleBibliography(event)">
-                    <h4>Bibliography ▼</h4>
-                </div>
-                <div class="bibliography" onclick="event.stopPropagation()">
-                    <ul>
-                        <li>Getzels, J. W., & Csikszentmihalyi, M. (1976). The creative vision: A longitudinal study of problem finding in art. Wiley.</li>
-                        <li>Hopper, L. M., et al. (2010). Chimpanzees' socially maintained food preferences indicate both conservatism and conformity. Animal Behaviour.</li>
-                        <li>Shi, R., Chen, Y., Hu, Y., Liu, A., Hajishirzi, H., Smith, N. A., & Du, S. S. (2024). Decoding-time language model alignment with multiple objectives. NeurIPS.</li>
-                        <li>Wulfmeier, M., et al. (2024). Imitating language via scalable inverse reinforcement learning. NeurIPS.</li>
-                        <li>Spangher, A., Tumgoren, S., Welsh, B., Peng, N., Ferrara, E., & May, J. (2024). Tracking the Newsworthiness of Public Documents. ACL.</li>
-                        <li>Starace, G., et al. (2025). PaperBench: A Benchmark for Scientific Writing. arXiv preprint.</li>
-                        <li>Abbeel, P., & Ng, A. Y. (2004). Apprenticeship learning via inverse reinforcement learning. ICML.</li>
-                        <li>Cohen, S. (2011). Computational Journalism. Communications of the ACM.</li>
-                        <li>Zhou, S., et al. (2023). WebArena: A Realistic Web Environment for Building Autonomous Agents. arXiv preprint.</li>
-                        <li>Spangher, A., Peng, N., Gehrmann, S., & Dredze, M. (2024). Do LLMs Plan Like Human Writers? Comparing Journalist Coverage of Press Releases with LLMs. EMNLP.</li>
-                    </ul>
-                </div>
-            </div>
+    <div id="abstract" class="section">
+        <h2 class="section-header">Abstract</h2>
+        <div class="abstract">
+            <p>The use of large language models (LLMs) in human-centered creative domains — such as journalism, scientific writing, and storytelling — has showcased their potential for content generation but highlighted a critical gap: planning. Planning, a fundamental process in many creative domains, refers to higher level decisions writers (or agents) make that influence textual output they produce. Planning is especially hard to perform in creative domains, where human rewards are often unclear or sparsely observed. This tutorial explores how planning has been learned and deployed in creative workflows. We will cover three aspects of creativity: <strong>Problem-Finding</strong> (how to define rewards and goals for creative tasks), <strong>Path-Finding</strong> (how to generate novel creative outputs that meet goals) and <strong>Evaluation</strong> (how to judge). We will also consider three learning settings: <em>Full Data Regimens</em> (when observational data for decisions and resulting text exist), <em>Partial</em> (when text exists but decisions can be inferred) and <em>Low</em> (when neither exist). The tutorial will end with practical demonstrations in computational journalism, web agents, and other creative domains. By bridging theoretical concepts and practical demonstrations, this tutorial aims to inspire new research directions in leveraging LLMs for creative planning tasks.</p>
         </div>
-        <div class="card" onclick="toggleCard(this)">
-            <div class="card-header">
-                <h3>Path-Finding</h3>
-                <span class="expand-icon">▼</span>
+    </div>
+
+    <div id="schedule" class="section">
+        <h2 class="section-header">Schedule</h2>
+        <div class="schedule" style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-bottom: 3rem;">
+            <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                <div style="font-weight: 500;">Introduction</div>
+                <div style="color: #666;">9:00 - 9:15</div>
             </div>
-            <div class="card-content">
-                <p class="quote">"Creativity involves breaking out of established patterns to look at things in a different way." — Edward de Bono, Serious Creativity</p>
-                <p>This section covers how humans develop alternative methods for solving problems through forward and backward approaches. Forward approaches involve direct training or prompting of models to generate sequences of actions, while backward approaches infer sequences of actions from available state information. We'll explore classical methods like means-ends analysis, backtracking, and regression planning, and how they're being incorporated into modern NLP systems.</p>
-                <p>We'll explore both forward and backward approaches to planning. Forward approaches include prompt-engineering and in-context learning, while researchers with more data can explicitly train planning agents. Backward approaches leverage state information to infer action sequences, drawing from classical methods like means-ends analysis and regression planning. We'll discuss how these methods are being integrated into modern NLP systems through latent variable modeling and variational inference, showing how they should be combined to infer and utilize latent plans in creative tasks.</p>
-                <div class="bibliography-toggle" onclick="toggleBibliography(event)">
-                    <h4>Bibliography ▼</h4>
-                </div>
-                <div class="bibliography" onclick="event.stopPropagation()">
-                    <ul>
-                        <li>Runco, M. A. (2001). Introduction to the special issue: Commemorating Guilford's 1950 presidential address. Creativity Research Journal.</li>
-                        <li>Guilford, J. P. (1950). Creativity. American Psychologist.</li>
-                        <li>Guilford, J. P. (1978). Alternate Uses: Manual of Instructions and Interpretations. Orange, CA: Sheridan Psychological Services.</li>
-                        <li>Finke, R. A., Ward, T. B., & Smith, S. M. (1996). Creative cognition: Theory, research, and applications. MIT Press.</li>
-                        <li>Gentner, D., & Bowdle, B. (2014). Metaphor as structure-mapping. In The Cambridge Handbook of Metaphor and Thought.</li>
-                        <li>Tian, Y., & Peng, N. (2023). MacGyver: Zero-shot Tool Learning with Large Language Models. arXiv preprint.</li>
-                        <li>Chen, X., & Peng, N. (2024). Self-play Fine-tuning Converts Weak Language Models to Strong Language Models. arXiv preprint.</li>
-                        <li>Côté, M. A., et al. (2018). TextWorld: A Learning Environment for Text-based Games. arXiv preprint.</li>
-                        <li>Newell, A., & Simon, H. A. (1961). GPS, a program that simulates human thought. In Computers and thought.</li>
-                        <li>Golomb, S. W., & Baumert, L. D. (1965). Backtrack programming. Journal of the ACM.</li>
-                        <li>McDermott, D. (1991). Regression planning. International Journal of Intelligent Systems.</li>
-                        <li>Xu, J., & Zhang, Y. (2019). Regression planning for natural language processing. EMNLP.</li>
-                        <li>Gandhi, K., Lee, D., Grand, G., Liu, M., Cheng, W., Sharma, A., & Goodman, N. D. (2024). Stream of search (sos): Learning to search in language. arXiv preprint arXiv:2404.03683.</li>
-                        <li>Chen, X., et al. (2024). Reverse Engineering Language Models. arXiv preprint.</li>
-                        <li>Min, S., Lewis, M., Hajishirzi, H., & Zettlemoyer, L. (2022). Rethinking the Role of Demonstrations: What Makes In-Context Learning Work? arXiv preprint.</li>
-                        <li>Pham, T., et al. (2024). TopicGPT: A Prompt-based Topic Modeling Framework. arXiv preprint.</li>
-                        <li>Zelikman, E., et al. (2022). STaR: Bootstrapping Reasoning With Reasoning. arXiv preprint.</li>
-                        <li>Deng, X., et al. (2024). Mind2Web: Towards a Generalist Agent for the Web. NeurIPS.</li>
-                        <li>Chakrabarty, T., Padmakumar, V., He, H., & Peng, N. (2023). Creative Natural Language Generation. EMNLP Tutorial.</li>
-                    </ul>
-                </div>
+            <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                <div style="font-weight: 500;">Problem-finding <span style="color: #666;">(<a href="https://www.alexander-spangher.com/" style="color: #666; text-decoration: none;">Alexander Spangher</a>)</span></div>
+                <div style="color: #666;">9:15 - 9:45</div>
             </div>
-        </div>
-        <div class="card" onclick="toggleCard(this)">
-            <div class="card-header">
-                <h3>Evaluation</h3>
-                <span class="expand-icon">▼</span>
+            <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                <div style="font-weight: 500;">Path-finding <span style="color: #666;">(Tenghao Huang)</span></div>
+                <div style="color: #666;">9:45 - 10:15</div>
             </div>
-            <div class="card-content">
-                <p class="quote">"The unexamined life is not worth living." — Plato, Apology of Socrates</p>
-                <p>Since creative tasks often lack objective metrics for success, this section focuses on evaluation methods based on human preference. We'll examine both offline evaluation (comparing plans to what human plans would have been) and online evaluation (HCI-focused methodologies). We'll explore novel metrics like latent criticism and conditional perplexity, moving beyond traditional surface-level metrics like BLEU or ROUGE scores.</p>
-                <p>We'll discuss two main modes of evaluation: offline and online. Offline evaluation focuses on comparing our plans to what human plans would have been, using novel metrics like latent criticism and conditional perplexity. These metrics move beyond surface-level comparisons to examine structural aspects of the output. Online evaluation follows HCI methodologies, studying human preferences for recommendations, suggestions, edits, and other AI assistance. We'll explore how these evaluation methods help us understand and improve creative planning systems without relying solely on traditional metrics.</p>
-                <div class="bibliography-toggle" onclick="toggleBibliography(event)">
-                    <h4>Bibliography ▼</h4>
-                </div>
-                <div class="bibliography" onclick="event.stopPropagation()">
-                    <ul>
-                        <li>Shi, F., & Peng, N. (2023). Large Language Models Can Learn Rules. arXiv preprint.</li>
-                        <li>Chen, X., Wang, C., Yu, F., & Song, D. (2019). Evaluating the Factual Consistency of Abstractive Text Summarization. arXiv preprint arXiv:1909.12840.</li>
-                        <li>Zhao, Z., et al. (2023). Recommender systems in the era of large language models (llms). arXiv preprint arXiv:2307.02046.</li>
-                        <li>Clark, E., & Smith, N. A. (2021). Choose your own adventure: Paired suggestions in collaborative writing for evaluating story generation models. NAACL.</li>
-                        <li>Laban, P., Vig, J., Hearst, M., Xiong, C., & Wu, C. S. (2024). Beyond the chat: Executable and verifiable text-editing with llms. UIST.</li>
-                        <li>Yang, D., et al. (2024). Human-Centered NLP: A Tutorial. NAACL.</li>
-                        <li>Hendrycks, D., et al. (2021). Measuring Mathematical Problem Solving with the MATH Dataset. arXiv preprint.</li>
-                        <li>Wu, T., Zhang, C., Hu, Q., Spangher, A., & Peng, N. (2023). Learning Action Conditions from Instructional Manuals. ACL.</li>
-                        <li>Wu, T., Spangher, A., Alipoormolabashi, P., Freedman, M., Weischedel, R., & Peng, N. (2022). Understanding Multimodal Procedural Knowledge. ACL.</li>
-                        <li>Ammanabrolu, P., et al. (2020). Story Realization: Expanding Plot Events into Sentences. EMNLP.</li>
-                        <li>Hamborg, F., Donnay, K., & Gipp, B. (2019). Automated identification of media bias in news articles: an interdisciplinary literature review. International Journal on Digital Libraries, 20(4), 391-415.</li>
-                        <li>Hosseini-Asl, E., et al. (2020). A Simple Language Model for Task-Oriented Dialogue. NeurIPS.</li>
-                        <li>Laban, P., et al. (2024). Beyond the chat: Executable and verifiable text-editing with llms. UIST.</li>
-                    </ul>
+            <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                <div style="font-weight: 500;">Path-finding <span style="color: #666;">(Nanyun Peng)</span></div>
+                <div style="color: #666;">10:15 - 10:45</div>
+            </div>
+            <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; background-color: #e9ecef; padding: 1rem; border-radius: 4px;">
+                <div style="font-weight: 500;">Break</div>
+                <div style="color: #666;">10:45 - 11:15</div>
+            </div>
+            <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                <div style="font-weight: 500;">Evaluation <span style="color: #666;">(Philippe Laban)</span></div>
+                <div style="color: #666;">11:15 - 11:45</div>
+            </div>
+            <div class="schedule-item" style="margin-bottom: 1rem;">
+                <div style="font-weight: 500; margin-bottom: 0.5rem;">Demos</div>
+                <div style="margin-left: 1.5rem;">
+                    <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <div><a href="https://arxiv.org/pdf/2503.04734" style="color: #2c3e50; text-decoration: underline;">Menu Design</a>. Presented by <span style="color: #666;"><a href="https://kristinagligoric.github.io/" style="color: #2c3e50; text-decoration: underline;">Kristina Gligoric.</a></span></div>
+                        <div style="color: #666;">11:45 - 12:00</div>
+                    </div>
+                    <div class="schedule-item" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <div><a href="https://minnesotanlp.github.io/LawFlow-website/" style="color: #2c3e50; text-decoration: underline;">LawFlow</a>. Presented by <span style="color: #666;"><a href="https://debaratidas94.github.io/" style="color: #2c3e50; text-decoration: underline;">Debarati Das.</a></span></div>
+                        <div style="color: #666;">12:00 - 12:15</div>
+                    </div>
+                    <div class="schedule-item" style="display: flex; justify-content: space-between;">
+                        <div><a href="https://storm-project.stanford.edu/research/storm/" style="color: #2c3e50; text-decoration: underline;">STORM</a>. Presented by <span style="color: #666;"><a href="https://yucheng-jiang.github.io/" style="color: #2c3e50; text-decoration: underline;">Yucheng Jiang.</a></span></div>
+                        <div style="color: #666;">12:15 - 12:30</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="tutorial-materials" style="text-align: center; margin-top: 3rem; padding: 2rem;">
-        <h2 class="section-header">Tutorial Materials</h2>
-        <p style="font-size: 1.2em;">
-            <a href="assets/tutorial_overview.pdf" style="color: #2c3e50; text-decoration: none; border-bottom: 2px solid #2c3e50; padding-bottom: 2px;">Download Tutorial Overview PDF</a>
-        </p>
-        <p style="font-size: 1.2em; margin-top: 1rem;">
-            <a href="#" style="color: #2c3e50; text-decoration: none; border-bottom: 2px solid #2c3e50; padding-bottom: 2px;">Video (coming soon)</a>
-        </p>
+    <div id="dive-deeper" class="section">
+        <h2 class="section-header">Dive Deeper</h2>
+        <div class="cards-container">
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <h3>Problem-Finding</h3>
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="card-content">
+                    <p class="quote">"The formulation of a problem is often more essential than its solution, which may be merely a matter of mathematical or experimental skill." — Albert Einstein, The Evolution of Physics</p>
+                    <p>In this section, we explore how creative actors define tasks, goal-states, and rewards. We map problem-finding in NLP to learning complex rewards, examining approaches that mix multiple rewards, frame language modeling as inverse-reinforcement learning (IRL), and explore emulation learning settings. We'll look at how humans (and chimpanzees) learn rewards through observing motivations and end-state outputs, and how this applies to understanding human creative processes.</p>
+                    <p>We'll examine how researchers have studied art students and found that those who focused most on defining the problem produced more creative work. In NLP, this translates to learning complex rewards through various approaches: mixing multiple rewards, framing language modeling as inverse-reinforcement learning, and exploring emulation learning settings. We'll discuss how scientists can "read through the lines" to understand actions taken in research papers, even when not explicitly mentioned, and how this ability is crucial for reproducibility in our field.</p>
+                    <div class="bibliography-toggle" onclick="toggleBibliography(event)">
+                        <h4>Bibliography ▼</h4>
+                    </div>
+                    <div class="bibliography" onclick="event.stopPropagation()">
+                        <ul>
+                            <li>Getzels, J. W., & Csikszentmihalyi, M. (1976). The creative vision: A longitudinal study of problem finding in art. Wiley.</li>
+                            <li>Hopper, L. M., et al. (2010). Chimpanzees' socially maintained food preferences indicate both conservatism and conformity. Animal Behaviour.</li>
+                            <li>Shi, R., Chen, Y., Hu, Y., Liu, A., Hajishirzi, H., Smith, N. A., & Du, S. S. (2024). Decoding-time language model alignment with multiple objectives. NeurIPS.</li>
+                            <li>Wulfmeier, M., et al. (2024). Imitating language via scalable inverse reinforcement learning. NeurIPS.</li>
+                            <li>Spangher, A., Tumgoren, S., Welsh, B., Peng, N., Ferrara, E., & May, J. (2024). Tracking the Newsworthiness of Public Documents. ACL.</li>
+                            <li>Starace, G., et al. (2025). PaperBench: A Benchmark for Scientific Writing. arXiv preprint.</li>
+                            <li>Abbeel, P., & Ng, A. Y. (2004). Apprenticeship learning via inverse reinforcement learning. ICML.</li>
+                            <li>Cohen, S. (2011). Computational Journalism. Communications of the ACM.</li>
+                            <li>Zhou, S., et al. (2023). WebArena: A Realistic Web Environment for Building Autonomous Agents. arXiv preprint.</li>
+                            <li>Spangher, A., Peng, N., Gehrmann, S., & Dredze, M. (2024). Do LLMs Plan Like Human Writers? Comparing Journalist Coverage of Press Releases with LLMs. EMNLP.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <h3>Path-Finding</h3>
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="card-content">
+                    <p class="quote">"Creativity involves breaking out of established patterns to look at things in a different way." — Edward de Bono, Serious Creativity</p>
+                    <p>This section covers how humans develop alternative methods for solving problems through forward and backward approaches. Forward approaches involve direct training or prompting of models to generate sequences of actions, while backward approaches infer sequences of actions from available state information. We'll explore classical methods like means-ends analysis, backtracking, and regression planning, and how they're being incorporated into modern NLP systems.</p>
+                    <p>We'll explore both forward and backward approaches to planning. Forward approaches include prompt-engineering and in-context learning, while researchers with more data can explicitly train planning agents. Backward approaches leverage state information to infer action sequences, drawing from classical methods like means-ends analysis and regression planning. We'll discuss how these methods are being integrated into modern NLP systems through latent variable modeling and variational inference, showing how they should be combined to infer and utilize latent plans in creative tasks.</p>
+                    <div class="bibliography-toggle" onclick="toggleBibliography(event)">
+                        <h4>Bibliography ▼</h4>
+                    </div>
+                    <div class="bibliography" onclick="event.stopPropagation()">
+                        <ul>
+                            <li>Runco, M. A. (2001). Introduction to the special issue: Commemorating Guilford's 1950 presidential address. Creativity Research Journal.</li>
+                            <li>Guilford, J. P. (1950). Creativity. American Psychologist.</li>
+                            <li>Guilford, J. P. (1978). Alternate Uses: Manual of Instructions and Interpretations. Orange, CA: Sheridan Psychological Services.</li>
+                            <li>Finke, R. A., Ward, T. B., & Smith, S. M. (1996). Creative cognition: Theory, research, and applications. MIT Press.</li>
+                            <li>Gentner, D., & Bowdle, B. (2014). Metaphor as structure-mapping. In The Cambridge Handbook of Metaphor and Thought.</li>
+                            <li>Tian, Y., & Peng, N. (2023). MacGyver: Zero-shot Tool Learning with Large Language Models. arXiv preprint.</li>
+                            <li>Chen, X., & Peng, N. (2024). Self-play Fine-tuning Converts Weak Language Models to Strong Language Models. arXiv preprint.</li>
+                            <li>Côté, M. A., et al. (2018). TextWorld: A Learning Environment for Text-based Games. arXiv preprint.</li>
+                            <li>Newell, A., & Simon, H. A. (1961). GPS, a program that simulates human thought. In Computers and thought.</li>
+                            <li>Golomb, S. W., & Baumert, L. D. (1965). Backtrack programming. Journal of the ACM.</li>
+                            <li>McDermott, D. (1991). Regression planning. International Journal of Intelligent Systems.</li>
+                            <li>Xu, J., & Zhang, Y. (2019). Regression planning for natural language processing. EMNLP.</li>
+                            <li>Gandhi, K., Lee, D., Grand, G., Liu, M., Cheng, W., Sharma, A., & Goodman, N. D. (2024). Stream of search (sos): Learning to search in language. arXiv preprint arXiv:2404.03683.</li>
+                            <li>Chen, X., et al. (2024). Reverse Engineering Language Models. arXiv preprint.</li>
+                            <li>Min, S., Lewis, M., Hajishirzi, H., & Zettlemoyer, L. (2022). Rethinking the Role of Demonstrations: What Makes In-Context Learning Work? arXiv preprint.</li>
+                            <li>Pham, T., et al. (2024). TopicGPT: A Prompt-based Topic Modeling Framework. arXiv preprint.</li>
+                            <li>Zelikman, E., et al. (2022). STaR: Bootstrapping Reasoning With Reasoning. arXiv preprint.</li>
+                            <li>Deng, X., et al. (2024). Mind2Web: Towards a Generalist Agent for the Web. NeurIPS.</li>
+                            <li>Chakrabarty, T., Padmakumar, V., He, H., & Peng, N. (2023). Creative Natural Language Generation. EMNLP Tutorial.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <h3>Evaluation</h3>
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="card-content">
+                    <p class="quote">"The unexamined life is not worth living." — Plato, Apology of Socrates</p>
+                    <p>Since creative tasks often lack objective metrics for success, this section focuses on evaluation methods based on human preference. We'll examine both offline evaluation (comparing plans to what human plans would have been) and online evaluation (HCI-focused methodologies). We'll explore novel metrics like latent criticism and conditional perplexity, moving beyond traditional surface-level metrics like BLEU or ROUGE scores.</p>
+                    <p>We'll discuss two main modes of evaluation: offline and online. Offline evaluation focuses on comparing our plans to what human plans would have been, using novel metrics like latent criticism and conditional perplexity. These metrics move beyond surface-level comparisons to examine structural aspects of the output. Online evaluation follows HCI methodologies, studying human preferences for recommendations, suggestions, edits, and other AI assistance. We'll explore how these evaluation methods help us understand and improve creative planning systems without relying solely on traditional metrics.</p>
+                    <div class="bibliography-toggle" onclick="toggleBibliography(event)">
+                        <h4>Bibliography ▼</h4>
+                    </div>
+                    <div class="bibliography" onclick="event.stopPropagation()">
+                        <ul>
+                            <li>Shi, F., & Peng, N. (2023). Large Language Models Can Learn Rules. arXiv preprint.</li>
+                            <li>Chen, X., Wang, C., Yu, F., & Song, D. (2019). Evaluating the Factual Consistency of Abstractive Text Summarization. arXiv preprint arXiv:1909.12840.</li>
+                            <li>Zhao, Z., et al. (2023). Recommender systems in the era of large language models (llms). arXiv preprint arXiv:2307.02046.</li>
+                            <li>Clark, E., & Smith, N. A. (2021). Choose your own adventure: Paired suggestions in collaborative writing for evaluating story generation models. NAACL.</li>
+                            <li>Laban, P., Vig, J., Hearst, M., Xiong, C., & Wu, C. S. (2024). Beyond the chat: Executable and verifiable text-editing with llms. UIST.</li>
+                            <li>Yang, D., et al. (2024). Human-Centered NLP: A Tutorial. NAACL.</li>
+                            <li>Hendrycks, D., et al. (2021). Measuring Mathematical Problem Solving with the MATH Dataset. arXiv preprint.</li>
+                            <li>Wu, T., Zhang, C., Hu, Q., Spangher, A., & Peng, N. (2023). Learning Action Conditions from Instructional Manuals. ACL.</li>
+                            <li>Wu, T., Spangher, A., Alipoormolabashi, P., Freedman, M., Weischedel, R., & Peng, N. (2022). Understanding Multimodal Procedural Knowledge. ACL.</li>
+                            <li>Ammanabrolu, P., et al. (2020). Story Realization: Expanding Plot Events into Sentences. EMNLP.</li>
+                            <li>Hamborg, F., Donnay, K., & Gipp, B. (2019). Automated identification of media bias in news articles: an interdisciplinary literature review. International Journal on Digital Libraries, 20(4), 391-415.</li>
+                            <li>Hosseini-Asl, E., et al. (2020). A Simple Language Model for Task-Oriented Dialogue. NeurIPS.</li>
+                            <li>Laban, P., et al. (2024). Beyond the chat: Executable and verifiable text-editing with llms. UIST.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="materials" class="section">
+        <div class="tutorial-materials" style="text-align: center; margin-top: 3rem; padding: 2rem;">
+            <h2 class="section-header">Tutorial Materials</h2>
+            <p style="font-size: 1.2em;">
+                <a href="assets/tutorial_overview.pdf" style="color: #2c3e50; text-decoration: none; border-bottom: 2px solid #2c3e50; padding-bottom: 2px;">Tutorial Abstract (PDF)</a>
+            </p>
+            <p style="font-size: 1.2em; margin-top: 1rem;">
+                <a href="https://docs.google.com/presentation/d/14nXD6iHLME7UG5Y63FwnRqjN3_u_4vrfGk6XZpCKfX4/edit?usp=sharing" style="color: #2c3e50; text-decoration: none; border-bottom: 2px solid #2c3e50; padding-bottom: 2px;">Tutorial Slides (Google Slides)</a>
+                <span style="margin: 0 0.5rem;">|</span>
+                <a href="assets/tutorial_slides.pdf" style="color: #2c3e50; text-decoration: none; border-bottom: 2px solid #2c3e50; padding-bottom: 2px;">Tutorial Slides (PDF)</a>
+            </p>
+            <p style="font-size: 1.2em; margin-top: 1rem;">
+                <a href="#" style="color: #2c3e50; text-decoration: none; border-bottom: 2px solid #2c3e50; padding-bottom: 2px;">Video (coming soon)</a>
+            </p>
+        </div>
     </div>
 
     <script src="static/js/basic.js"></script>
+    <script>
+        document.querySelectorAll('.sticky-header a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                if (targetId === 'home') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const targetElement = document.getElementById(targetId);
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
